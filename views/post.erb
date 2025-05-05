@@ -1,4 +1,4 @@
-<h1>Комментарии к посту:</h1>
+<h1>Детали поста:</h1>
 <br/>
 
 <% @result.each do |post| %>
@@ -10,3 +10,21 @@
 	    </p>
 	  <hr/> <!-- раздляет чертой --> 
 <% end %>
+
+<br/>
+
+
+<form action="/post/<%= @row['id'] %>" method="POST">
+
+  <div class="mb-3">
+	<h4>Комментарии:</h4>
+  </div>
+
+  <div class="mb-3">
+	  <textarea name="content" class="form-control" placeholder="Расскажи что думаешь!" id="floatingTextarea2" style="height: 100px"></textarea>
+  </div>
+
+  <br/>
+  	<button type="submit" class="btn btn-primary">Добавить комментарий</button>
+
+</form>
