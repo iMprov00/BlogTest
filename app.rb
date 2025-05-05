@@ -51,3 +51,13 @@ post '/new' do
 	redirect to '/'
 
 end
+
+get '/post/:id' do  
+
+	id = params[:id]
+
+	@result = 	@result = @db.execute 'SELECT * FROM Posts WHERE id = ?', [id]
+
+	erb "Тут будет комменатрии по посту №#{id}"
+
+end
