@@ -21,6 +21,8 @@ configure do
 	init_db
 	@db.execute 'CREATE TABLE IF NOT EXISTS "Posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "created_date" DATE, "content" TEXT);'
 
+	@db.execute 'CREATE TABLE IF NOT EXISTS "Comment" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "created_date" DATE, "comment" TEXT, "post_id" INTEGER);'
+
 end
 
 get '/' do 
@@ -67,6 +69,8 @@ post '/post/:id' do
 
 	id = params[:id]	
 	content = params[:content]
+
+	@db.execute 'INSERT INTO Comment (comment, created_date, post_id) VALUES (?, datetime(), ?)', [content, id]
 
 	erb "Вы ввели комментарий #{content}, к посту с номером #{id}"
 end
