@@ -62,3 +62,11 @@ get '/post/:id' do
 	erb :post
 
 end
+
+post '/post/:id' do  
+
+	id = params[:id]	
+	content = params[:content]
+
+	erb "Вы ввели комментарий #{content}, к посту с номером #{id}"
+end
