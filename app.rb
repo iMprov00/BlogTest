@@ -72,5 +72,5 @@ post '/post/:id' do
 
 	@db.execute 'INSERT INTO Comment (comment, created_date, post_id) VALUES (?, datetime(), ?)', [content, id]
 
-	erb "Вы ввели комментарий #{content}, к посту с номером #{id}"
+	redirect to ('/post/' + id)
 end
