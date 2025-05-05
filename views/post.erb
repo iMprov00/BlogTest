@@ -6,18 +6,26 @@
 	      <%= @row['content'] %>
 	      <br/>
 	      <br/>
-	      Время добавления: <%= @row['created_date'] %>
+	      <h6>Время добавления: <%= @row['created_date'] %></h6>
 	    </p>
 	  <hr/> <!-- раздляет чертой --> 
 <% end %>
 
+<h4>Комментарии:</h4>
 <br/>
-
+<% @comment.each do |comm| %>
+	    <p>
+	      <%= comm['comment'] %>
+	      <br/>
+	      <h6>Время добавления: <%= comm['created_date']%></h6>
+	    </p>
+	  <hr/> <!-- раздляет чертой --> 
+<% end %>
 
 <form action="/post/<%= @row['id'] %>" method="POST">
 
   <div class="mb-3">
-	<h4>Комментарии:</h4>
+  	<h4>Написать комментарий</h4>
   </div>
 
   <div class="mb-3">
