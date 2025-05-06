@@ -1,2 +1,12 @@
 
 blog.db
+public/vendor/bootstrap/css/bootstrap-theme.css
+public/vendor/bootstrap/css/bootstrap-theme.min.css
+public/vendor/bootstrap/css/bootstrap.css
+public/vendor/bootstrap/css/bootstrap.min.css
+public/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot
+public/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg
+public/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf
+public/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff
+public/vendor/bootstrap/js/bootstrap.js
+public/vendor/bootstrap/js/bootstrap.min.js
