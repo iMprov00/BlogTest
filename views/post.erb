@@ -5,8 +5,7 @@
 	    <p>
 	      <%= @row['content'] %>
 	      <br/>
-	      <br/>
-	      <h6>Время добавления: <%= @row['created_date'] %></h6>
+	        <span style="font-size: 75%; color: #999; font-style: italic">Время добавления поста: <%= @row['created_date'] %></span>
 	    </p>
 	  <hr/> <!-- раздляет чертой --> 
 <% end %>
@@ -17,7 +16,7 @@
 	    <p>
 	      <%= comm['comment'] %>
 	      <br/>
-	      <h6>Время добавления: <%= comm['created_date']%></h6>
+	       <span style="font-size: 75%; color: #999; font-style: italic">Время добавления: <%= comm['created_date']%></span>
 	    </p>
 	  <hr/> <!-- раздляет чертой --> 
 <% end %>
